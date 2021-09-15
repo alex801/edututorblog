@@ -1,0 +1,22 @@
+<svg 
+ xmlns="http://www.w3.org/2000/svg"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ width="444px" height="101px">
+<defs>
+<filter filterUnits="userSpaceOnUse" id="Filter_0" x="0px" y="0px" width="444px" height="101px"  >
+    <feOffset in="SourceAlpha" dx="0" dy="8" />
+    <feGaussianBlur result="blurOut" stdDeviation="3.162" />
+    <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
+    <feComposite operator="atop" in="floodOut" in2="blurOut" />
+    <feComponentTransfer><feFuncA type="linear" slope="0.35"/></feComponentTransfer>
+    <feMerge>
+    <feMergeNode/>
+    <feMergeNode in="SourceGraphic"/>
+  </feMerge>
+</filter>
+
+</defs>
+<g filter="url(#Filter_0)">
+<text kerning="auto" font-family="Myriad Pro" fill="rgb(0, 0, 0)" transform="matrix( 1.52772404286741, 0, 0, 1.72779324611462,9.31058837603769, 81.5906544414704)" font-size="60px"><tspan font-size="60px" font-family="Fredoka One" fill="#000000">Edu</tspan><tspan font-size="60px" font-family="Fredoka One" fill="#4E2FB8">Tutor</tspan></text>
+</g>
+</svg>
