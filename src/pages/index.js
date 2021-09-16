@@ -4,7 +4,7 @@ import Layout from "../components/Layout";
 
 import { graphql } from "gatsby";
 const IndexPage = () => {
-  return <h2>gatsby mdx blog starter</h2>;
+  return <Layout>gatsby mdx blog starter</Layout>;
 };
 
 export default IndexPage;
