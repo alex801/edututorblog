@@ -20,16 +20,15 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "images",
-        path: "./src/images/",
+        name: "assets",
+        path: `${__dirname}/src/assets`,
       },
-      __key: "images",
-    },
+          },
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        name: "pages",
-        path: "./src/pages/",
+        name: "posts",
+        path: `${__dirname}/src/posts`,
       },
       __key: "pages",
     },
