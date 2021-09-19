@@ -17,7 +17,7 @@ const IndexPage = ({ data }) => {
 };
 export const query = graphql`
   {
-    allMdx(sort: { fields: frontmatter___date }) {
+    allMdx(limit: 3, sort: { fields: frontmatter___date }) {
       nodes {
         id
         frontmatter {
