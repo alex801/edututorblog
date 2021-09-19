@@ -13,6 +13,7 @@ const Layout = ({ children }) => {
       <Sidebar isOpen={isOpen} toggle ={toggle} />
 
       <main>{children}</main>
+      <Footer />
     </>
   );
 };
