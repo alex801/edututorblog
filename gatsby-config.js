@@ -8,13 +8,28 @@ module.exports = {
     "gatsby-plugin-image",
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+
     {
       resolve: "gatsby-plugin-manifest",
       options: {
         icon: "src/images/icon.png",
       },
     },
-    "gatsby-plugin-mdx",
+    `gatsby-remark-images`,
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 590,
+            },
+          },
+        ],
+      },
+    },
+
     "gatsby-plugin-sharp",
     "gatsby-transformer-sharp",
     {
@@ -23,7 +38,7 @@ module.exports = {
         name: "assets",
         path: `${__dirname}/src/assets`,
       },
-          },
+    },
     {
       resolve: "gatsby-source-filesystem",
       options: {
