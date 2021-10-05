@@ -62,7 +62,7 @@ body {
   background: var(--clr-white);
   color: var(--clr-grey-1);
   line-height: 1.5;
-  font-size: 0.875rem;
+  font-size: 1rem;
 }
 
 ul {
@@ -613,7 +613,11 @@ Testing Post and Components
   width: 20rem;
   border-radius: 1rem;
 }
-
+.second-inline-img {
+  width: 10rem;
+  border-radius: 1rem;
+  margin: 0 auto;
+}
 /*
 ===============
 Footer

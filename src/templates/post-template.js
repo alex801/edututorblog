@@ -103,6 +103,7 @@ const Wrapper = styled.section`
       width: 75%;
       display: block;
       margin: 0 auto;
+      border-radius: var(--radius);
     }
   }
   @media (min-width: 1170px) {

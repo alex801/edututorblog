@@ -19,6 +19,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-mdx`,
       options: {
+        remarkPlugins: [require("remark-math")],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,
