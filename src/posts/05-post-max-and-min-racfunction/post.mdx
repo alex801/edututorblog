@@ -1,0 +1,147 @@
+---
+title: Как найти максимум и минимум функции?
+slug: max-and-min-function
+image: ./images/max.png
+date: 2021-10-09
+author: Алексей Лебедев
+category: Исследование функций
+readTime: 3
+embeddedImages:
+  - ./images/image2.png
+  - ./images/image3.png
+  - ./images/image4.png
+  - ./images/image5.png
+  - ./images/image6.png
+---
+
+import Alert from "react-bootstrap/Alert";
+import { Link } from "gatsby";
+import { GatsbyImage, getImage } from "gatsby-plugin-image";
+import ListGroup from "react-bootstrap/ListGroup";
+import Accordion from "react-bootstrap/Accordion";
+import {Video} from '../../components/Complete/'
+
+<Video src="https://www.youtube.com/embed/1cp7Kj3lifA" />
+<br/>
+<br/>
+<br/>
+
+
+### Максимум и минимум рациональной функции
+
+Пусть нам нужно найти точку максимума функции <Tex math="y=x^3+4x^2+4x+4" />. Это можно сделать построив график этой функции. Точкой максимума будет абсцисса <Tex math="x=-2" />.
+
+
+<GatsbyImage
+  image={getImage(props.embeddedImages[0])}
+  alt="random"
+  className="first-inline-img"
+/>
+
+Обратите внимание, что речь идет о локальном максимуме, а под "точкой" подразумевается абсцисса точки в которой достигается максимум.
+
+<Alert variant="warning">
+  <Alert.Heading>ЗАПОМНИТЕ</Alert.Heading>
+  <p>
+    <b>Найти точку максимума или минимума функции</b> - это значит{" "}
+    <b>найти абсциссу точки</b> (<Tex math="x" />
+    ), в которой функция достигает максимума или минимума.
+  </p>
+</Alert>
+
+### Как найти максимум функции с помощью производной?
+
+Для того, чтобы найти максимум функции <Tex math="y=x^3+4x^2+4x+4" /> нужно действовать по алгоритму:
+
+<ListGroup>
+  <ListGroup.Item variant="dark">1. Найти производную функции.</ListGroup.Item>
+  <ListGroup.Item variant="light">2. Найти нули производной.</ListGroup.Item>
+  <ListGroup.Item variant="dark">
+    3.Определить знаки производной на интервалах.
+  </ListGroup.Item>
+  <ListGroup.Item variant="light">
+    4. Определить промежутки возрастания и убывания функции.
+  </ListGroup.Item>
+</ListGroup>
+<br />
+
+**Первый шаг:** Находим производную функции <Tex math="y'=3x^2+8x+4" />
+
+**Второй шаг:** Находим нули производной, решая уравнение <Tex math="3x^2+8x+4=0" />. Нули <Tex math="x_1=-2" /> и <Tex math="x_1=-\dfrac{2}{3}" />
+
+**Третий шаг:** Определяем знаки производной на интервалах
+
+
+<GatsbyImage
+  image={getImage(props.embeddedImages[1])}
+  alt="random"
+  className="first-inline-img"
+/>
+
+**Четвертый шаг:** Определяем промежутки возрастания и убывания функции. Для этого вспоминаем, что:
+
+<blockquote display="info">
+  Если <b>производная положительна</b> на некотором промежутке, то{" "}
+  <b>функция возрастает</b>. Если <b>производная отрицательна</b> на некотором
+  промежутке, то <b>функция убывает.</b>
+</blockquote>
+
+<GatsbyImage
+  image={getImage(props.embeddedImages[2])}
+  alt="random"
+  className="first-inline-img"
+/>
+
+<br />
+<br />
+
+### Примеры нахождения максимума или минимума рациональной функции
+
+<br />
+
+<Accordion>
+  <Accordion.Item eventKey="0">
+    <Accordion.Header>
+      Найти точку максимума функции <Tex math=" \quad y=9-4x+4x^2-x^3" />
+    </Accordion.Header>
+    <Accordion.Body>
+      <b> Первый шаг: </b> <Tex math=" \quad y'=-3x^2+8x-4" />
+      <br />
+      <b> Второй шаг: </b> Решаем уравнение <Tex math="3x^2+8x-4=0" />. Нули
+      производной: <Tex math="x_1=\dfrac{2}{3}" /> и <Tex math="x_2=2" />
+      <br />
+      <b> Третий и четвертый шаги:</b> Определяем знаки производной и промежутки
+      возрастания/убывания функции.
+      <br />
+      <GatsbyImage
+        image={getImage(props.embeddedImages[3])}
+        alt="random"
+        className="first-inline-img"
+      />
+       <br/>
+      <b>Ответ: 2</b>
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="1">
+    <Accordion.Header>
+      Найти точку минимума функции <Tex math=" \quad y=x^3-4x^2-16x+8" />
+    </Accordion.Header>
+    <Accordion.Body>
+      <b> Первый шаг: </b> <Tex math=" \quad y'=3x^2-8x-16" />
+      <br />
+      <b> Второй шаг: </b> Решаем уравнение <Tex math="3x^2-8x-16=0" />. Нули
+      производной: <Tex math="x_1=-\dfrac{4}{3}" /> и <Tex math="x_2=4" />
+      <br />
+      <b> Третий и четвертый шаги:</b> Определяем знаки производной и промежутки
+      возрастания/убывания функции.
+      <br />
+      <GatsbyImage
+        image={getImage(props.embeddedImages[4])}
+        alt="random"
+        className="first-inline-img"
+      />
+      <br/>
+      <b>Ответ: 4</b>
+    </Accordion.Body>
+  </Accordion.Item>
+  </Accordion>

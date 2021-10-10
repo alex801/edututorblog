@@ -1,17 +1,21 @@
 ---
 title: Производная сложной функции
 slug: derivative-compound-function
-image: ./images/img1.png
-date: 2020-10-04
+image: ./images/diff_png.png
+date: 2021-10-09
 author: Алексей Лебедев
 category: Исследование функций
-readTime: 50
+readTime: 3
 embeddedImages:
   - ./images/02.png
 ---
 import { Link } from "gatsby";
 import { GatsbyImage, getImage } from "gatsby-plugin-image";
 import {Video} from '../../components/Complete/'
+import Button from "react-bootstrap/Button";
+import Accordion from "react-bootstrap/Accordion";
+import Alert from 'react-bootstrap/Alert'
+
 
 <Video src="https://www.youtube.com/embed/IdPn_gpviC4" />
 
@@ -19,7 +23,7 @@ import {Video} from '../../components/Complete/'
 <br/>
 
 
-### Как найти производную сложной функции?
+### Как найти производную сложной функции
  Для начала давайте разберемся: что такое сложная функция.
  Например, функция  <Tex math="(3x-2)^4" />- сложная, а функция <Tex math="x^4" /> - элементарная. 
 
@@ -50,3 +54,39 @@ import {Video} from '../../components/Complete/'
 #### Примеры нахождения производной сложной функции
 
 
+<Accordion >
+  <Accordion.Item eventKey="0">
+    <Accordion.Header>Найти производную функции  <Tex math=" \quad y=(2-5x^3)^2" /></Accordion.Header>
+    <Accordion.Body>
+      <b>Производная внутренней функции:</b> <Tex math="(2-5x^3)'=-15x^2" />
+      <br/>
+      <b>Производная внешней функции:</b> <Tex math="(\square^2)'=2\square" />
+      <br/>
+     <b> Применяем правило:</b> <Tex math="y'=-15x^2\cdot 2(2-5x^3)=-30x^2\cdot(2-5x^3)" />
+      
+    </Accordion.Body>
+  </Accordion.Item>
+  <Accordion.Item eventKey="1">
+    <Accordion.Header>Найти производную функции  <Tex math=" \quad y=\sin(5x)" /></Accordion.Header>
+    <Accordion.Body>
+       <b>Производная внутренней функции:</b> <Tex math="(5x)'=5" />
+      <br/>
+      <b>Производная внешней функции:</b> <Tex math="(\sin(\square))'=\cos(\square)" />
+      <br/>
+      <b>Применяем правило:</b> <Tex math="y'=5\cdot \cos(5x)" />
+    </Accordion.Body>
+  </Accordion.Item>
+    <Accordion.Item eventKey="2">
+    <Accordion.Header>Найти производную функции  <Tex math=" \quad y=e^{4-3x}" /></Accordion.Header>
+    <Accordion.Body>
+       <b>Производная внутренней функции:</b> <Tex math="(4-3x)'=-3" />
+      <br/>
+      <b>Производная внешней функции:</b> <Tex math="(e^{\square})'=e^{\square}" />
+      <br/>
+      <b>Применяем правило:</b> <Tex math="y'=-3e^{4-3x}" />
+    </Accordion.Body>
+  </Accordion.Item>
+</Accordion>
+
+
+<div style="padding:55.83% 0 0 0;position:relative;"><iframe src="https://player.vimeo.com/video/615321379?h=2c45e9cb35&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Урок 1(б) Нахождение минимума и максимума рациональных функций"></iframe></div><script src="https://player.vimeo.com/api/player.js"></script>
